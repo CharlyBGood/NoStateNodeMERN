@@ -1,17 +1,18 @@
 import { Router } from "express";
-import * as linkCtrl from "../controllers/link.controller";
+import * as linksController from "../controllers/links.controller";
+// import * as linkCtrl from "../controllers/link.controller";
 
 const router = Router();
 
-router.post("/links", linkCtrl.createLink);
+router.get("/", linksController.getLinks);
+router.post("/", linksController.createLink);
 
-router.get("/links", linkCtrl.findAllLinks);
 
-router.get("/links/:id", linkCtrl.findOneLink);
+router.get("/:id", linksController.getLink);
 
-router.delete("/links/:id", linkCtrl.deleteLink);
+router.delete("/:id", linksController.deleteLink);
 
-router.put("/links/:id", linkCtrl.updateLink);
+router.put("/:id", linksController.updateLink);
 
 export default router;
 

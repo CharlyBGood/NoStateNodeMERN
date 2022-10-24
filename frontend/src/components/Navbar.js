@@ -14,6 +14,9 @@ function Navbar() {
           alt="nostatenode horse logo"
         />
       </nav>
+      <button className="log-button" onClick={() => alert("you're logged in!")}>
+        Login
+      </button>
     </div>
   );
 }
