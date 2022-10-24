@@ -13,6 +13,7 @@ function Table() {
   };
 
   const deleteLink = (id) => {
+    alert("Are you sure you want to delete from the list?")
     const linksActual2 = links.filter((link) => link.id !== id);
     setLinks(linksActual2);
   };
