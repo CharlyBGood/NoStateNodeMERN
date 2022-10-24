@@ -1,0 +1,75 @@
+:root {
+  --soft-black: #2e2b2b;
+  --dark-black: #212121;
+  --wheat: #e0d6c4;
+  --orange-wheat: #f0ab2a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Source Code Pro", monospace;
+  padding: 0;
+  margin: 0;
+  max-height: 100%;
+  background-color: var(--dark-black);
+  color: var(--wheat);
+  font-size: 16px;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 80%;
+  margin: 0.5em auto 3em;
+  font-size: 0.9em;
+  gap: 1em;
+}
+
+@media screen and (max-width: 750px) {
+  /* .App {
+    justify-content: flex-end;
+  } */
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .main-container,
+  .table-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
