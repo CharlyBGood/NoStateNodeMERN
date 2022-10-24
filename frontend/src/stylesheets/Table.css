@@ -1,0 +1,40 @@
+.table-container {
+  background-color: var(--soft-black);
+  margin: 0.5em 0;
+  border-radius: 0.6em;
+  -webkit-box-flex: 0.8;
+  -ms-flex: 0.8;
+  flex: 0.8;
+}
+
+.links-table {
+  width: 100%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.links-table tr,
+.links-table td {
+  border: 0.5px solid var(--dark-black);
+  width: 100%;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.table-header {
+  padding: 0.3em;
+}
+
+.table-header th {
+  text-align: center;
+}
+
+.table-body {
+  width: 60%;
+}
+
+.table-body a {
+  color: var(--orange-wheat);
+  text-decoration: none;
+  line-break: auto;
+}

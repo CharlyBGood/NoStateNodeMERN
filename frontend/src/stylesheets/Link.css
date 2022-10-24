@@ -1,0 +1,11 @@
+/* .todo-container-icons svg {
+    color: var(--orange-wheat);
+    cursor: pointer;
+} */
+
+.todo-icon {
+  width: 35%;
+  height: 35%;
+  color: var(--orange-wheat);
+  cursor: pointer;
+}

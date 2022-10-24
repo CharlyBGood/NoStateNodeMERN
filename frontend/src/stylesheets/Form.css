@@ -1,0 +1,33 @@
+.main-container {
+  margin: 0.5em 0;
+  flex: 0.4;
+  color: var(--wheat);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  background-color: var(--soft-black);
+  border-radius: 0.6em;
+  gap: 1em;
+}
+
+.form-btn {
+  background-color: var(--soft-black);
+  color: var(--wheat);
+  cursor: pointer;
+  border-radius: 0.4em;
+  border: 1px solid var(--dark-black);
+  padding: 0.4em;
+}
+
+.form-title,
+.form-content {
+  width: 100%;
+  margin: 0.5em auto;
+  padding: 0.3em;
+  background-color: var(--dark-black);
+  color: var(--wheat);
+}
