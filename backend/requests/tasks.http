@@ -9,7 +9,7 @@ GET http://localhost:3000/links/?page=1&size=2
 ###
 # send links and add them to the database
 # POST http://localhost:3000/links
-POST https://charlybgood.art/links
+POST http://localhost:3000/links
 Content-Type: application/json
 
 {
@@ -24,7 +24,7 @@ GET http://localhost:3000/links/63403a5e0b07c18e32659c35
 
 # delete link from database
 ###
-DELETE  http://localhost:3000/links/63408e2516a9d19347478739
+DELETE  http://localhost:3000/links/6356b61a855d84888a53a5ae
 
 ### 
 
