@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/Table.css";
 import "../stylesheets/Link.css";
-import { FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 function Link({ id, text, url, deleteLink }) {
   return (
@@ -13,6 +13,7 @@ function Link({ id, text, url, deleteLink }) {
       </td>
       <td className="todo-container-icons">
         <FaTrash onClick={() => deleteLink(id)} className="todo-icon" />
+        <FaEdit className="todo-icon" />
       </td>
     </tr>
   );
