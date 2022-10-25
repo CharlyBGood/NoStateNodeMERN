@@ -12,6 +12,11 @@ const linkSchema = new Schema(
       type: String,
       trim: true,
     },
+    author: String,
+    date: {
+      type: Date,
+      default: Date.now
+    }
   },
   {
     versionKey: false,
