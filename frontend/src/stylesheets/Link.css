@@ -1,11 +1,12 @@
-/* .todo-container-icons svg {
-    color: var(--orange-wheat);
-    cursor: pointer;
-} */
+.todo-container-icons {
+  display: flex;
+  padding: 0;
+}
 
-.todo-icon {
-  width: 35%;
-  height: 35%;
+svg.todo-icon {
+  font-size: 1.2em;
+  /* margin: 0 .3em; */
+  display: flex;
   color: var(--orange-wheat);
   cursor: pointer;
 }

@@ -37,4 +37,5 @@
   color: var(--orange-wheat);
   text-decoration: none;
   line-break: auto;
+  word-break: break-word;
 }

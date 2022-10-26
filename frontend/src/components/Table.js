@@ -21,7 +21,7 @@ function Table() {
   return (
     <>
       <Form onSubmit={addLink} />
-      <div className="table-container">
+      <aside className="table-container">
         <table className="links-table">
           <thead className="table-header">
             <tr>
@@ -41,7 +41,7 @@ function Table() {
             ))}
           </tbody>
         </table>
-      </div>
+      </aside>
     </>
   );
 }

@@ -1,17 +1,18 @@
 import React from "react";
 import "../stylesheets/Table.css";
 import "../stylesheets/Link.css";
-import { FaEdit, FaTrash } from "react-icons/fa";
+import "../stylesheets/User.css"
+import { FaTrash } from "react-icons/fa";
 
-function User({ username }) {
+function User({ username, deleteBtn, id }) {
   return (
     <tr>
-      <td className="todo-txt">
+      <td className="todo-txt username">
         {username}
       </td>
       <td className="todo-container-icons">
-        <FaTrash className="todo-icon" />
-        <FaEdit className="todo-icon" />
+        <FaTrash className="todo-icon" onClick={() => deleteBtn()}/>
+        {/* <FaEdit className="todo-icon" /> */}
       </td>
     </tr>
   );

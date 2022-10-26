@@ -27,7 +27,7 @@ function Form(props) {
     form.reset();
   };
   return (
-    <div className="main-container">
+    <main className="main-container">
       <form id="form" onSubmit={handleSend} className="form-container">
         <label>Descriptive Title</label>
         <input
@@ -48,7 +48,7 @@ function Form(props) {
         {/* <textarea rows="6" className="form-content" placeholder="Sing your song here..."></textarea> */}
         <button className="form-btn">Add</button>
       </form>
-    </div>
+    </main>
   );
 }
 

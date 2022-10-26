@@ -16,15 +16,12 @@
   -ms-flex-align: start;
   align-items: flex-start;
   width: 80%;
-  margin: 0.5em auto 3em;
+  margin: 13% auto;
   font-size: 0.9em;
   gap: 1em;
 }
 
 @media screen and (max-width: 750px) {
-  /* .App {
-    justify-content: flex-end;
-  } */
   .container {
     display: -webkit-box;
     display: -ms-flexbox;

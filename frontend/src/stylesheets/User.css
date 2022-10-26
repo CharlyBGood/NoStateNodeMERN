@@ -1,0 +1,4 @@
+.username {
+  cursor: pointer;
+  user-select: none;
+}
