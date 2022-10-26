@@ -14,9 +14,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/Users" element={<Users />} />
-          <Route path="/Profile" element={<Profile />} />{" "}
+          <Route path="/Profile" element={<Profile />} />
           {/* esto es donde crear Nota */}
-          <Route path="/edit/:id" element={<Profile />} />{" "}
+          <Route path="/edit/:id" element={<Profile />} />
           {/* esto es donde editar Nota */}
         </Routes>
         <Footer />

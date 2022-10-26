@@ -8,14 +8,14 @@ function Table() {
   const [links, setLinks] = useState([]);
 
   const addLink = (link) => {
-    const linksActual = [link, ...links];
-    setLinks(linksActual);
+    const linksUpdate = [link, ...links];
+    setLinks(linksUpdate);
   };
 
   const deleteLink = (id) => {
     alert("Are you sure you want to delete from the list?")
-    const linksActual2 = links.filter((link) => link.id !== id);
-    setLinks(linksActual2);
+    const linksUpdateDel = links.filter((link) => link.id !== id);
+    setLinks(linksUpdateDel);
   };
 
   return (
