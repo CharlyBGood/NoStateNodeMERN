@@ -9,35 +9,28 @@ function UsersTable() {
   const fetchUsers = async () => {
     const res = await axios.get("http://localhost:4000/api/users");
     setUsers(res.data);
-    console.log(res.data);
+    // console.log(res.data);
   };
 
   useEffect(() => {
     fetchUsers();
   }, []);
 
-  // const addUser = (user) => {
-  //   if (user.username.trim()) {
-  //     user.username = user.username.trim();
-  //     const usersUpdate = [user, ...users];
-  //     setUsers(usersUpdate);
-  //     console.log("user added");
-  //   } else {
-  //     console.log("user cannot be blank");
-  //   }
-  // };
-
-  const addUser = async () => {
+  const addUser = () => {
     console.log("adding user");
     fetchUsers();
   };
 
-  const deleteBtn = (id) => {
-    alert("sure to delete?")
-    const usersUpdateDel = users.filter((user) => user._id !== id);
-    setUsers(usersUpdateDel);
-    console.log(id)
-  }
+  const deleteBtn = async (id) => {
+    alert("sure to delete?");
+    await axios.delete("http://localhost:4000/api/users/" + id);
+
+    // const usersUpdateDel =  users.filter((user) => user._id !== id);
+    // setUsers(usersUpdateDel);
+    // props.onClick(usersUpdateDel)
+    console.log(id);
+    fetchUsers();
+  };
 
   return (
     <div className="container">
@@ -50,7 +43,7 @@ function UsersTable() {
                 className="list-item"
                 key={user._id}
                 username={user.username}
-                deleteBtn={deleteBtn}
+                deleteBtn={() => deleteBtn(user._id)}
               />
             ))}
           </tbody>

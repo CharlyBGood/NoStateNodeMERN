@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
+// import { v4 as uuidv4 } from "uuid";
 import "../stylesheets/Form.css";
 
 function Form(props) {
@@ -15,15 +16,19 @@ function Form(props) {
     setInput(e.target.value);
   };
 
-  const handleSend = (e) => {
+  const handleSend = async (e) => {
     e.preventDefault();
-    const newLink = {
-      id: uuidv4(),
-      text: input,
-      url: url,
-    };
+    // const newLink = {
+    //   id: uuidv4(),
+    //   text: input,
+    //   url: url,
+    // };
+    const newLink = await axios.post("http://localhost:4000/api/links", {
+      title: input, link: url
+    });
     props.onSubmit(newLink);
-    localStorage.setItem("link", newLink.text);
+    console.log(newLink);
+    // localStorage.setItem("link", newLink.text);
     form.reset();
   };
   return (

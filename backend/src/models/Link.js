@@ -11,11 +11,6 @@ const linkSchema = new Schema(
     link: {
       type: String,
       trim: true,
-    },
-    author: String,
-    date: {
-      type: Date,
-      default: Date.now
     }
   },
   {

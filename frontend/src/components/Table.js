@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import Form from "./Form";
 import Link from "./Link";
 import "../stylesheets/Table.css";
@@ -7,15 +7,35 @@ import "../stylesheets/Table.css";
 function Table() {
   const [links, setLinks] = useState([]);
 
-  const addLink = (link) => {
-    const linksUpdate = [link, ...links];
-    setLinks(linksUpdate);
+  const fetchLinks = async () => {
+    const res = await axios.get("http://localhost:4000/api/links");
+    setLinks(res.data);
+    console.log(res.data);
   };
 
-  const deleteLink = (id) => {
-    alert("Are you sure you want to delete from the list?")
-    const linksUpdateDel = links.filter((link) => link.id !== id);
-    setLinks(linksUpdateDel);
+  useEffect(() => {
+    fetchLinks();
+  }, []);
+
+  const addLink = (link) => {
+    // const linksUpdate = [link, ...links];
+    // setLinks(linksUpdate);
+    fetchLinks();
+    console.log(link);
+  };
+
+  const deleteLink = async (id) => {
+    // alert("Are you sure you want to delete from the list?")
+    // const linksUpdateDel = links.filter((link) => link.id !== id);
+    // setLinks(linksUpdateDel);
+    alert("sure to delete?");
+    await axios.delete("http://localhost:4000/api/links/" + id);
+
+    // const usersUpdateDel =  users.filter((user) => user._id !== id);
+    // setUsers(usersUpdateDel);
+    // props.onClick(usersUpdateDel)
+    console.log(id);
+    fetchLinks();
   };
 
   return (
@@ -32,11 +52,11 @@ function Table() {
           <tbody className="table-body">
             {links.map((link) => (
               <Link
-                key={link.id}
-                id={link.id}
-                text={link.text}
-                url={link.url}
-                deleteLink={deleteLink}
+                key={link._id}
+                // id={link._id}
+                text={link.title}
+                url={link.link}
+                deleteLink={() => deleteLink(link._id)}
               />
             ))}
           </tbody>

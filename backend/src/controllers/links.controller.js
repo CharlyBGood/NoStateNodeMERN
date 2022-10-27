@@ -23,11 +23,10 @@ export const getLink = async (req, res) => {
 };
 
 export const updateLink = async (req, res) => {
-  const { title, link, author } = req.body;
+  const { title, link } = req.body;
   await Link.findByIdAndUpdate(req.params.id, {
     title, 
     link,
-    author
   })
   res.json({ message: "Note updated" })
 };
