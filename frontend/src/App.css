@@ -16,7 +16,7 @@
   -ms-flex-align: start;
   align-items: flex-start;
   width: 80%;
-  margin: 13% auto;
+  margin: 0.5em auto;
   font-size: 0.9em;
   gap: 1em;
 }

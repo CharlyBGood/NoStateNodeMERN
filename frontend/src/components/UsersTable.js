@@ -17,7 +17,6 @@ function UsersTable() {
   }, []);
 
   const addUser = () => {
-    console.log("adding user");
     fetchUsers();
   };
 
@@ -28,7 +27,7 @@ function UsersTable() {
     // const usersUpdateDel =  users.filter((user) => user._id !== id);
     // setUsers(usersUpdateDel);
     // props.onClick(usersUpdateDel)
-    console.log(id);
+    // console.log(id);
     fetchUsers();
   };
 

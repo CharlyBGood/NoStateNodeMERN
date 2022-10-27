@@ -14,8 +14,10 @@ function Navbar() {
           alt="nostatenode horse logo"
         />
       </nav>
-      <button className="log-button" onClick={() => alert("you're logged in!")}>
+      <button className="log-button" onClick={() => alert("Create a username!!")}>
+        <Link to="./Users">
         Login
+        </Link>
       </button>
     </div>
   );

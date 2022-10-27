@@ -18,7 +18,7 @@ function UsersForm(props) {
     // };
     const newUser = await axios.post("http://localhost:4000/api/users", {username: input})
     props.onSubmit(newUser);
-    console.log(newUser);
+    // console.log(newUser);
     form.reset();
   };
 

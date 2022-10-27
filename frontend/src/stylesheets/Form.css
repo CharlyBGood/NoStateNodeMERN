@@ -21,6 +21,12 @@
   border-radius: 0.4em;
   border: 1px solid var(--dark-black);
   padding: 0.4em;
+  margin: 1.5em auto;
+}
+
+.form-btn a {
+  text-decoration: none;
+  color: var(--wheat);
 }
 
 .form-title,

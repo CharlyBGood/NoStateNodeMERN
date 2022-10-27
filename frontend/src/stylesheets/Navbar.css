@@ -50,6 +50,11 @@
   margin: 1em 3em;
 }
 
+.log-button a {
+  text-decoration: none;
+  color: var(--wheat);
+}
+
 @media screen and (max-width: 850px) {
   .nav-container {
     flex-direction: column;
