@@ -3,9 +3,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* margin: 11% auto; */
   text-align: center;
+  position: relative;
+  top: 8%;
+  z-index: inherit;
 }
 
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 85%;
+}
 .container {
   display: -webkit-box;
   display: -ms-flexbox;

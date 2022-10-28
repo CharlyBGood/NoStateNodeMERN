@@ -2,12 +2,22 @@ import "../stylesheets/Form.css";
 
 function Login() {
   const getIn = () => {
-    alert("Log in or create user!")
-  }
+    alert("Log in or create user!");
+  };
   return (
     <div className="main-container">
-      <p>Do you want to get in?</p>
-      <button className="form-btn"  onClick={() => getIn()}>YES, please!</button>
+      <div className="welcome-container">
+        <h2>Te damos la bienvenida</h2>
+        <p>
+          NoStateNode es un espacio para compartir ideas, recursos y buscar
+          financiación para proyectos.
+          Para comenzar debes crear una cuenta, si ya la tienes inicia sesión.
+          Gracias.
+        </p>
+      </div>
+      <button className="form-btn" onClick={() => getIn()}>
+        ¡Quiero ser parte!
+      </button>
     </div>
   );
 }

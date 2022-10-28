@@ -10,7 +10,7 @@ function Table() {
   const fetchLinks = async () => {
     const res = await axios.get("http://localhost:4000/api/links");
     setLinks(res.data);
-    console.log(res.data);
+    // console.log(res.data);
   };
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function Table() {
     // const linksUpdate = [link, ...links];
     // setLinks(linksUpdate);
     fetchLinks();
-    console.log(link);
+    // console.log(link);
   };
 
   const deleteLink = async (id) => {
@@ -34,7 +34,7 @@ function Table() {
     // const usersUpdateDel =  users.filter((user) => user._id !== id);
     // setUsers(usersUpdateDel);
     // props.onClick(usersUpdateDel)
-    console.log(id);
+    // console.log(id);
     fetchLinks();
   };
 

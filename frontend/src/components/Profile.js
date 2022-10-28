@@ -1,14 +1,43 @@
 import React from "react";
 import "../stylesheets/Profile.css";
 import Table from "./Table";
+import { useState, useEffect } from "react";
+import axios from "axios";
 // import Welcome from "./Welcome";
 
 const Profile = () => {
+  const [users, setUsers] = useState([]);
+  // const [userSel, setUserSel] = useState([]);
+
+  const fetchUsers = async () => {
+    const res = await axios.get("http://localhost:4000/api/users");
+    setUsers(res.data.map(user => user.username));
+    console.log(res.data.map(user => user.username));
+  };
+
+  const selectUsr = (e) => {
+    fetchUsers({userSelected: e.target.value})
+    console.log(e.target.value)
+  }
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
   return (
     <div className="main-profile-container">
-      <div className="profile-container">
-        <h2>¡Hola, comienza organizando recursos!</h2>
+      <div className="">
+        <div className="profile-container">
+          <h2>¡Hola {}, comienza organizando recursos!</h2>
+        </div>
+        <select name="userSelected" onChange={selectUsr}>
+          {users.map((user) => (
+            <option value={user} key={user}>
+              {user}
+            </option>
+          ))}
+        </select>
       </div>
+
       <div className="container">
         <Table />
       </div>
