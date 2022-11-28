@@ -2,7 +2,7 @@ import "../stylesheets/Form.css";
 
 function Login() {
   const getIn = () => {
-    alert("Log in or create user!");
+    alert("Inicia sesión o crea una cuenta!");
   };
   return (
     <div className="main-container">

@@ -11,14 +11,17 @@ const Profile = () => {
 
   const fetchUsers = async () => {
     const res = await axios.get("http://localhost:4000/api/users");
-    setUsers(res.data.map(user => user.username));
-    console.log(res.data.map(user => user.username));
+    setUsers(res.data.map((user) => user.username));
+    // console.log(res.data.map((user) => user.username));
   };
 
-  const selectUsr = (e) => {
-    fetchUsers({userSelected: e.target.value})
-    console.log(e.target.value)
-  }
+  const selectUsr = async (e) => {
+    let user = e.target.value
+    console.log(user);
+    fetchUsers(user);
+    console.log(`hello ${user}`) 
+    
+  };
 
   useEffect(() => {
     fetchUsers();

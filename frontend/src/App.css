@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin: 11% auto; */
+  margin: 0 auto;
   text-align: center;
-  position: relative;
-  top: 8%;
-  z-index: inherit;
+  /* position: relative;
+  top: 8%; */
+  /* z-index: inherit; */
 }
 
 .welcome-container {
@@ -32,7 +32,10 @@
   gap: 1em;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
+  .App {
+    margin: 31% auto;
+  }
   .container {
     display: -webkit-box;
     display: -ms-flexbox;

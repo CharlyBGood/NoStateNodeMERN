@@ -18,6 +18,7 @@ function UsersTable() {
 
   const addUser = () => {
     fetchUsers();
+    console.log(users.map((user) => user._id))
   };
 
   const deleteBtn = async (id) => {
